@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FHE Assigner</string>
+    <string name="text_view_name">Name:</string>
+    <string name="email_notify">Notify by email</string>
+    <string name="sms_notify">Notify by SMS</string>
+    <string name="include_as_participant">Participating:</string>
+    <string name="participating_once">Just this week</string>
+    <string name="participating_weekly">Weekly</string>
+    <string name="participating_not">No</string>
+    <string name="contact_email">Email:</string>
+    <string name="contact_number">Phone:</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_save">Save</string>
+    <string name="spinner_difficulty">Difficulty:</string>
+
+    <string-array name="difficulty_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
