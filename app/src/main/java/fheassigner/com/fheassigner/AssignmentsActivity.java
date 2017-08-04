@@ -5,25 +5,26 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class PersonActivity extends AppCompatActivity {
+public class AssignmentsActivity extends AppCompatActivity {
 
     private FloatingActionButton mAddFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person);
+        setContentView(R.layout.activity_assigments);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        mAddFab = (FloatingActionButton) findViewById(R.id.add_person_fab);
+        mAddFab = (FloatingActionButton) findViewById(R.id.add_assignment_fab);
         mAddFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addAssignmentIntent = new Intent(PersonActivity.this, NewPersonActivity.class);
+                Intent addAssignmentIntent = new Intent(AssignmentsActivity.this, NewAssignmentActivity.class);
                 startActivity(addAssignmentIntent);
             }
         });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

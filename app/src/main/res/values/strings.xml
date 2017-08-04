@@ -12,10 +12,21 @@
     <string name="button_cancel">Cancel</string>
     <string name="button_save">Save</string>
     <string name="spinner_difficulty">Difficulty:</string>
+    <string name="drawer_open">Open Navigation Menu</string>
+    <string name="drawer_close">Close Navigation Menu</string>
+    <string name="main_menu_participants">Edit Participants</string>
+    <string name="main_menu_assignments">Edit Assignments</string>
 
     <string-array name="difficulty_array">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
     </string-array>
+
+    <string-array name="nav_menu_array">
+        <item>Home</item>
+        <item>Assignments</item>
+        <item>People</item>
+    </string-array>
+
 </resources>
