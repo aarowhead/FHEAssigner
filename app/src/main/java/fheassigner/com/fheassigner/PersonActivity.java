@@ -1,14 +1,20 @@
 package fheassigner.com.fheassigner;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import model.Model;
 
 public class PersonActivity extends AppCompatActivity {
 
     private FloatingActionButton mAddFab;
+    private RecyclerView mPersonRecycler;
+    private PersonListAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +31,13 @@ public class PersonActivity extends AppCompatActivity {
                 startActivity(addAssignmentIntent);
             }
         });
+
+        mPersonRecycler = (RecyclerView)findViewById(R.id.people_recycler_view);
+        mPersonRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mAdapter = new PersonListAdapter(Model.getInstance().getPeople());
+        mPersonRecycler.setAdapter(mAdapter);
+
+        mAdapter.notifyDataSetChanged();
+
     }
 }

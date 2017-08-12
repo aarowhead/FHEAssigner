@@ -16,6 +16,11 @@
     <string name="drawer_close">Close Navigation Menu</string>
     <string name="main_menu_participants">Edit Participants</string>
     <string name="main_menu_assignments">Edit Assignments</string>
+    <string name="save_successful"> was saved</string>
+    <string name="save_unsuccessful">Nothing was saved</string>
+    <string name="error_toast">Error: </string>
+    <string name="file_not_found">File Not Found</string>
+    <string name="generic_error">An error has occurred</string>
 
     <string-array name="difficulty_array">
         <item>Easy</item>

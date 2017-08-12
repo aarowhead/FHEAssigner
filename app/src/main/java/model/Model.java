@@ -1,7 +1,8 @@
 package model;
 
-import java.util.HashSet;
-import java.util.Set;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -16,9 +17,23 @@ import person.Person;
 
 public class Model {
 
-    private Set<Person> people = new HashSet<>();
-    private Set<FheActivity> activities = new HashSet<>();
+    private static Model myModel;
+    private ArrayList<Person> people = new ArrayList<Person>();
+    private ArrayList<FheActivity> activities = new ArrayList<FheActivity>();
     private SortedMap<FheActivity, Person> assignments = new TreeMap<>();
+
+    private Model(){
+        Person test = new Person();
+        test.setName("Tester");
+        people.add(test);
+    }
+
+    public static Model getInstance(){
+        if(myModel == null){
+            myModel = new Model();
+        }
+        return myModel;
+    }
 
     public void addPerson(Person newPerson){
         people.add(newPerson);
@@ -60,5 +75,18 @@ public class Model {
 
     public void rotateAssignments(){
         //TODO: Implement an algorithm to rotate the assignments
+    }
+
+    public ArrayList<Person> getPeople() {
+        return people;
+    }
+
+    public ArrayList<FheActivity> getActivities() {
+        Collections.sort(activities);
+        return activities;
+    }
+
+    public SortedMap<FheActivity, Person> getAssignments() {
+        return assignments;
     }
 }
